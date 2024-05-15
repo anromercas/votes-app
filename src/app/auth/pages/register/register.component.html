@@ -1,0 +1,35 @@
+<div class="body">
+    <div class="login">
+        <mat-spinner *ngIf="loading" class="spinner"></mat-spinner>
+
+        <form *ngIf="!loading" [formGroup]="form" (ngSubmit)="register()">
+            <h1>Registro</h1>
+            <mat-form-field class="w-80-p100">
+                <mat-label>Nombre</mat-label>
+                <input matInput formControlName="name">
+            </mat-form-field>
+            <mat-form-field class="w-80-p100">
+                <mat-label>Apellidos</mat-label>
+                <input matInput formControlName="lastName">
+            </mat-form-field>
+            <mat-form-field class="w-80-p100">
+                <mat-label>Email</mat-label>
+                <input matInput formControlName="email">
+            </mat-form-field>
+            <mat-form-field class="w-80-p100">
+                <mat-label>Contraseña</mat-label>
+                <input type="password" matInput formControlName="password">
+            </mat-form-field>
+    
+            <button type="submit" class="w-80-p100 h-3-em" mat-raised-button color="primary" [disabled]="form.invalid">
+                <mat-icon>login</mat-icon>
+                Registrar
+            </button>
+
+            <div class="flex justify-content-end mt-5">
+                <a routerLink="/auth/login">Ya tengo cuenta</a>
+            </div>
+            
+        </form>
+    </div>
+</div>

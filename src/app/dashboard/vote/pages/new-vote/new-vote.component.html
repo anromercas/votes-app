@@ -1,0 +1,32 @@
+<div class="container mx-auto flex flex-col items-center bg-gray-100 p-4">
+    <h1 class="text-3xl font-bold underline p-4">Nueva votación</h1>
+    <form [formGroup]="form" class="flex flex-col items-center space-x-6 ">
+        <div class="mb-5">
+            <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-slate-900">Seleccionar comunidad</label>
+            <select formControlName="community" id="countries" 
+            class="bg-gray-50 border 
+            border-gray-300 
+            text-gray-900 
+            text-sm 
+            rounded-lg 
+            focus:ring-blue-500 
+            focus:border-blue-500 
+            block 
+            w-full 
+            p-2.5 
+            dark:bg-gray-700 
+            dark:border-gray-600 
+            dark:placeholder-gray-400 
+            dark:text-white 
+            dark:focus:ring-blue-500 
+            dark:focus:border-blue-500">
+          
+              <option value="">Seleccionar</option>
+              <option *ngFor="let community of communities" [value]="community._id">{{ community.name }}</option>
+            </select>
+        </div>
+        <div class="mb-5">
+            
+        </div>
+    </form>
+  </div>

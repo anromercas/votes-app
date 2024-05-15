@@ -1,0 +1,45 @@
+<div class="container mx-auto flex flex-col items-center bg-gray-100 p-4">
+    <h1 class="text-3xl font-bold underline p-4">Actualizar Propietarios comunidad</h1>
+    <form class="flex items-center space-x-6">
+        <div class="mb-5">
+            <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-slate-900">Seleccionar comunidad</label>
+            <select id="countries" 
+            class="bg-gray-50 border 
+            border-gray-300 
+            text-gray-900 
+            text-sm 
+            rounded-lg 
+            focus:ring-blue-500 
+            focus:border-blue-500 
+            block 
+            w-full 
+            p-2.5 
+            dark:bg-gray-700 
+            dark:border-gray-600 
+            dark:placeholder-gray-400 
+            dark:text-white 
+            dark:focus:ring-blue-500 
+            dark:focus:border-blue-500">
+          
+              <option>Seleccionar</option>
+              <option>United States</option>
+              <option>Canada</option>
+              <option>France</option>
+              <option>Germany</option>
+            </select>
+        </div>
+      <div class="shrink-0">
+        <img class="h-16 w-16 object-cover rounded-full" src="../assets/img/excel.png" alt="excel img" />
+      </div>
+      <label class="block">
+        <span class="sr-only">Choose profile photo</span>
+        <input type="file" 
+        class="block w-full text-sm text-slate-500
+        file:mr-4 file:py-2 file:px-4
+        file:rounded-full file:border-0
+        file:text-sm file:font-semibold
+        file:bg-violet-50 file:text-violet-700
+        hover:file:bg-violet-100" (change)="readExcelFile($event)">
+      </label>
+    </form>
+  </div>
